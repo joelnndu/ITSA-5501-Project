@@ -55,10 +55,10 @@ git tag -a v1.0 -m "Milestone 1 complete"
 git push origin v1.0
 
 
-README – Milestone 2
-Course: ITSA 5501
-Student: Joel Ndu
-School: Humber College
+## README – Milestone 2
+## Course: ITSA 5501
+## Student: Joel Ndu
+
 
 Docker Compose – Milestone 2 Overview
 This milestone uses Docker Compose to run a small multi-service environment.
