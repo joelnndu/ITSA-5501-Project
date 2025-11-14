@@ -53,3 +53,53 @@ git pull origin main
 # Tag versions
 git tag -a v1.0 -m "Milestone 1 complete"
 git push origin v1.0
+
+
+README – Milestone 2
+Course: ITSA 5501
+Student: Joel Ndu
+School: Humber College
+
+Docker Compose – Milestone 2 Overview
+This milestone uses Docker Compose to run a small multi-service environment.
+The setup includes:
+- A frontend website (Nginx)
+- MongoDB database
+- PostgreSQL database
+- Redis cache
+- Prometheus monitoring
+
+Services:
+- Frontend (Port 9090)
+- MongoDB (internal)
+- PostgreSQL (internal)
+- Redis (internal)
+- Prometheus (Port 9091)
+
+Volumes:
+- user_data → MongoDB data
+- product_data → PostgreSQL data
+
+Network:
+- app-network → internal bridge network
+
+How to Run:
+1. Start all containers:
+   cd docker
+   docker-compose up -d
+
+2. Check running services:
+   docker ps
+
+3. Open in browser:
+   Frontend → http://localhost:9090
+   Prometheus → http://localhost:9091
+
+Scale Frontend:
+   docker-compose up -d --scale frontend=3
+
+Stop All Containers:
+   docker-compose down
+
+Summary:
+This milestone shows how to run and manage multiple containers, use volumes, scale services, and monitor with Prometheus.
